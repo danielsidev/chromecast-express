@@ -46,40 +46,40 @@ Se você possuir mais de 1 chromecast e quiser enviar o vídeo para um device es
 ```
     {
       "media": {
-    		          "device":"Sala",
-    		          "playlist":[{
-    					    "name":"Vídeo de teste",
-    					    "path":"http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
-    					  }]
-      				}
+    	"device":"Sala",
+    	"playlist":[{
+    	     "name":"Vídeo de teste",
+    		 "path":"http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
+    	}]
+      }
     }		  
 ```
 
 Se existem somente 1 Chromecast, envie com a proriedade **device** em branco:
 
 ```
-    {
-      "media": {
-    		          "device": ' ',
-    		          "playlist":[{
-    					    "name":"Vídeo de teste",
-    					    "path":"http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
-    					  }]
-      				}
-    }		  
+{
+  "media": {
+    "device":" ",
+    "playlist":[{
+         "name":"Vídeo de teste",
+         "path":"http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
+    }]
+  }
+}			  
 ```
 **Para vídeos locais informe o caminho absoluto**
 
 ```
     {
       "media": {
-    		          "device":"Sala",
-    		          "playlist":[{
-    					    "name":"Vídeo de teste",
-    					    "path":"/home/$USER(seu usuario)/videos/meu-video.mp4"
-    					  }]
-      				}
-    }		  
+    	"device":"Sala",
+    	"playlist":[{
+    	     "name":"Vídeo de teste",
+    		 "path":"/home/$USER(seu usuario)/videos/meu-video.mp4"
+    	}]
+      }
+    }
 ```
 
 
