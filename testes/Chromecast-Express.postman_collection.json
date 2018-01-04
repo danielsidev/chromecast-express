@@ -1,0 +1,122 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Chromecast-Express",
+		"_postman_id": "5653ce97-e9f5-b397-4c18-7bf486b4f964",
+		"description": "Middleware para compartilhar vídeos com o chromecast",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "INIT MÓDULO CHROMECAST",
+			"request": {
+				"url": "http://localhost:32300/chromecast/init",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "SEND VIDEO CHROMECAST - device vazio",
+			"request": {
+				"url": "http://localhost:32300/chromecast/sendvideo",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"media\": {\n\t\t   \"device\":\"\",\n\t\t   \"playlist\":[\n\t\t\t\t\t   {\n\t\t\t\t\t    \"name\":\"Vídeo de teste\",\n\t\t\t\t\t    \"path\":\"http://commondatastorage.googleapis.com/gtv-videos-bucket/ED_1280.mp4\"\n\t\t\t\t\t   }\n\t\t\t\t\t  ]\n\t\t  }\n}\t\t  "
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "SEND VIDEO CHROMECAST - video local",
+			"request": {
+				"url": "http://localhost:32300/chromecast/sendvideo",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"media\": {\n\t\t   \"device\":\"\",\n\t\t   \"playlist\":[\n\t\t\t\t\t   {\n\t\t\t\t\t    \"name\":\"Vídeo de teste\",\n\t\t\t\t\t    \"path\":\"/home/$USER(seu usuário)/Downloads/1.Fate-Apo/HyuugaDownloads_EA_Fate_Apocrypha_22.mp4\"\n\t\t\t\t\t   }\n\t\t\t\t\t  ]\n\t\t  }\n}\t\t  "
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "SEND VIDEO CHROMECAST - device",
+			"request": {
+				"url": "http://localhost:32300/chromecast/sendvideo",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"media\": {\n\t\t   \"device\":\"Quarto\",\n\t\t   \"playlist\":[\n\t\t\t\t\t   {\n\t\t\t\t\t    \"name\":\"Vídeo de teste\",\n\t\t\t\t\t    \"path\":\"http://commondatastorage.googleapis.com/gtv-videos-bucket/ED_1280.mp4\"\n\t\t\t\t\t   }\n\t\t\t\t\t  ]\n\t\t  }\n}\t\t  "
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "PLAY / PAUSE VIDEO CHROMECAST",
+			"request": {
+				"url": "http://localhost:32300/chromecast/playpause",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "STOP VIDEO CHROMECAST",
+			"request": {
+				"url": "http://localhost:32300/chromecast/stop",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

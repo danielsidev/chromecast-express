@@ -1,0 +1,70 @@
+{
+  "name": "chromecast-express",
+  "version": "1.0.0",
+  "description": "Um middleware para compartilhar vídeos com o chromecast baseado na library castnow.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielsidev/chromecast-express.git"
+  },
+  "dependencies": {
+    "array-loop": "^1.0.0",
+    "array-shuffle": "^1.0.1",
+    "body-parser": "^1.7.0",
+    "castv2-client": "^1.1.0",
+    "chalk": "1.0.0",
+    "chromecast-player": "^0.2.3",
+    "compression": "^1.6.2",
+    "ejs": "^1.0.0",
+    "cors": "^2.8.3",
+    "debounced-seeker": "^1.0.0",
+    "diveSync": "^0.3.0",
+    "express": "^4.16.2",
+    "fs": "0.0.1-security",
+    "got": "^1.2.2",
+    "hammerjs": "^2.0.8",
+    "helmet": "^3.6.0",
+    "internal-ip": "^1.0.0",
+    "jquery": "^3.1.1",
+    "mdns": "^2.3.4",
+    "mime": "^1.2.11",
+    "peerflix": "^0.34.0",
+    "query-string": "^1.0.0",
+    "range-parser": "^1.0.2",
+    "read-torrent": "^1.0.0",
+    "router": "^0.6.2",
+    "srt-to-vtt": "^1.1.1",
+    "srt2vtt": "^1.3.1",
+    "stream-transcoder": "0.0.5",
+    "util": "^0.10.3",
+    "xml2js": "^0.4.4",
+    "xspfr": "^0.3.1",
+    "xtend": "^4.0.0"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "compatilhar",
+    "video",
+    "chromecast",
+    "middleware",
+    "player",
+    "media",
+    "share"
+  ],
+  "author": "Daniel Siqueira <http://danielsiqueira.net>",
+  "contributors": [
+    {
+      "name": "Simon Kusterer",
+      "email": "simon@soped.com",
+      "url": "https://github.com/xat"
+    }
+  ],
+  "license": "MIT"
+}
