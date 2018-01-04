@@ -28,7 +28,7 @@ Estrutura de Rotas
 ### Testando a aplicação
 
 - Importe o json que está dentro da pasta  **testes** para o **Postman**  => [Donwload do Postman Aqui!](https://www.getpostman.com/)
-- Execute cada um dos teste, lembrando de alterar o teste do vídeo local pelo caminho de sua máquina( Pc ou Macos)
+- Teste pelo postman, lembrando de alterar o teste do vídeo local pelo caminho de sua máquina( Pc ou Macos)
 
 #### Ordem de execução
 
@@ -51,7 +51,7 @@ Se você possuir mais de 1 chromecast e quiser enviar o vídeo para um device es
     	"device":"Sala",
     	"playlist":[{
     	     "name":"Vídeo de teste",
-    		   "path":"http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
+    	     "path":"http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
     	}]
       }
     }		  
@@ -78,7 +78,7 @@ Se existem somente 1 Chromecast, envie com a proriedade **device** em branco:
     	"device":"Sala",
     	"playlist":[{
     	     "name":"Vídeo de teste",
-    		   "path":"/home/$USER(seu usuario)/videos/meu-video.mp4"
+    	     "path":"/home/$USER(seu usuario)/videos/meu-video.mp4"
     	}]
       }
     }
