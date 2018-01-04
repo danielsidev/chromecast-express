@@ -7,16 +7,16 @@ Um middleware com express para compartilhar vídeos com o chromecast baseado na 
 
 Estrutura de Rotas
 ==============
-####http://localhost:32300/chromecast
-|   Método      |     Caminho            |  Descrição      |
-| :------------: | ------------ |------------ |
-|   GET      |       /init         | Inicia o módulo do chromecast        |
-|  |  |        |
-|   POST |       /sendvideo  | Envia o vídeo para o chromecast       |
-|  |  |        |
-|   PUT     |       /playpause         | Executa o Play ou Pause a cada chamada       |
-|  |  |        |
-|  PUT      |       /stop         | Para a reprodução do vídeo       |
+#### http://localhost:32300/chromecast
+|   Método      |     Caminho  |  Descrição  |
+| ------------  | ------------ |------------ |
+|   GET         | /init     | Inicia o módulo do chromecast |
+|               |              |             |
+|   POST        | /sendvideo   | Envia o vídeo para o chromecast |
+|               |              |             |
+|   PUT         | /playpause   | Executa o Play ou Pause a cada chamada |
+|               |              |             |
+|  PUT          | /stop        | Para a reprodução do vídeo |
 
 
 ### Instalação
@@ -43,6 +43,7 @@ Estrutura de Rotas
 ### Escolhendo o Chromecast
 Se você possuir mais de 1 chromecast e quiser enviar o vídeo para um device específico, informe o nome do chromecast na propriedade device do objeto enviado a rota  => **/sendvideo**:
 
+```
     {
       "media": {
     		          "device":"Sala",
@@ -52,11 +53,11 @@ Se você possuir mais de 1 chromecast e quiser enviar o vídeo para um device es
     					  }]
       				}
     }		  
-
+```
 
 Se existem somente 1 Chromecast, envie com a proriedade **device** em branco:
 
-
+```
     {
       "media": {
     		          "device": ' ',
@@ -66,10 +67,10 @@ Se existem somente 1 Chromecast, envie com a proriedade **device** em branco:
     					  }]
       				}
     }		  
-
+```
 **Para vídeos locais informe o caminho absoluto**
 
-
+```
     {
       "media": {
     		          "device":"Sala",
@@ -79,7 +80,7 @@ Se existem somente 1 Chromecast, envie com a proriedade **device** em branco:
     					  }]
       				}
     }		  
-
+```
 
 
 ### Sobre Legendas
