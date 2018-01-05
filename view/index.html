@@ -3,15 +3,105 @@
   <head>
     <meta charset="utf-8">
     <title>Middleware Chromecast</title>
+    <style type="text/css">
+    .principal{
+      display: block;
+      position: relative;
+      width: 80%;
+      margin: 5% auto;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px #000;
+      padding: 10px;
+    }
+    .principal h2{
+      text-align: center;
+      color: #1c3657;
+    }
+    .principal h4{ text-align: center;}
+    .principal h5{
+      font-weight: bold;
+      font-size: 15px;
+      margin: 1%;
+      background: #333;
+      color: #f0f0f0;
+      border-radius: 5px;
+      padding: 1% 2%;
+      letter-spacing: 2px;
+    }
+    .principal div.rotas{
+      display: block;
+          margin: 3% 1%;
+          background: #f0f0f0;
+          border-radius: 5px;
+          padding: 2%;
+          box-shadow: 0px 0px 10px #666;
+    }
+    </style>
   </head>
   <body>
+    <div class="principal">
+
     <h2>Middleware para Chromecast</h2>
 
     <h4>Métodos Aceitos</h4>
     <h5>Prefixo: /chromecast</h5>
-    <p>GET  => init</p>
-    <p>POST => sendvideo</p>
-    <p>PUT  => playpause</p>
-    <p>PUT  => stop</p>
+
+
+    <div class='rotas'>GET => /init
+      <br/><br/>
+      <b>Monta os objetos necessários com os dados da library e inicia as propriedas para o envio do vídeo.</b>
+      <br/><br/>
+      response => json<br /><br/>
+       {success:true, error:false, message:"Modelo Chromecast Iniciado!" }
+    </div>
+
+    <div class='rotas'>POST => /sendvideo
+      <br/><br/>
+      param send => json<br />
+      <b>Informando o nome do Chromecast em device</b>
+      <pre>
+        {
+         "media": {
+              "device":"Sala",
+              "playlist":[{
+                  "name":"Vídeo de teste",
+                  "path":"http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
+              }]
+            }
+          }</pre>
+      <br/><br/>
+      <b>Se possuir somente 1 Chromecast não precisa informar o nome. Localizamos o único na rede.</b>
+      <pre>
+        {
+         "media": {
+              "device":"",
+              "playlist":[{
+                  "name":"Vídeo de teste",
+                  "path":"http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
+              }]
+            }
+          }</pre>
+      <br/><br/>
+      response => json<br /><br/>
+      {success:true, error:false, message:"Vídeo enviado ao Chromecast: [nome-device]"}
+    </div>
+
+
+    <div class='rotas'>PUT => /playpause
+      <br/><br/>
+      <b>Cada requisição a mesma rota altera o status entre Play e Pause, de acordo com o status atual.</b>
+      <br/><br/>
+      response => json<br /><br/>
+      {success:true, error:false, message:"Play / Pause do Vídeo no Chromecasst" }
+    </div>
+
+    <div class='rotas'>PUT => /stop
+      <br/><br/>
+      <b>Para a reprodução do vídeo e mantém a conexão com o chromecast.</b>
+      <br/><br/>
+      response => json<br /><br/>
+      {success:true, error:false, message:"Stop do Vídeo no Chromecast" }
+    </div>
+    </div>
   </body>
 </html>
